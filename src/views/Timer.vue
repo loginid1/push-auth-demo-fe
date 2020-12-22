@@ -47,7 +47,7 @@ export default {
       devices: [""],
     };
   },
-  mounted() {
+  async mounted() {
     // TODO: get the variables
     this.email = "BXXXXX@mXXXXX.com";
     this.code = "4M2S3J";
