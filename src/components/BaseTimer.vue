@@ -27,7 +27,7 @@ const ALERT_THRESHOLD = 5;
 
 const COLOR_CODES = {
   info: {
-    color: "green"
+    color: "blue"
   },
   warning: {
     color: "orange",
@@ -115,8 +115,8 @@ export default {
 <style scoped lang="scss">
 .base-timer {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
 
   &__svg {
     transform: scaleX(-1);
@@ -141,8 +141,8 @@ export default {
     fill-rule: nonzero;
     stroke: currentColor;
 
-    &.green {
-      color: rgb(65, 184, 131);
+    &.blue {
+      color: rgb(50, 115, 220);
     }
 
     &.orange {
@@ -156,8 +156,8 @@ export default {
 
   &__label {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     top: 0;
     display: flex;
     align-items: center;

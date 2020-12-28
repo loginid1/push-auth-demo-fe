@@ -7,11 +7,13 @@ import {actions} from './actions';
 Vue.use(Vuex);
 
 const store = {
-  strict: true, 
-  state: {username: ''}, 
-  getters, 
+  strict: true,
+  state: {
+    username: '',
+    directweb: null
+  },
+  getters,
   mutations, actions,
-
 }
 
 export default new Vuex.Store(store);

@@ -19,7 +19,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "auth" */ "../views/Authenticate.vue"),
     props: {
-      mode: "login",
+      mode: "Login",
     },
   },
   {
@@ -28,12 +28,13 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "auth" */ "../views/Authenticate.vue"),
     props: {
-      mode: "register",
+      mode: "Register",
     },
   },
   {
     path: "/auth-selector",
     name: "AuthSelector",
+    props: true,
     component: () => import("../views/AuthSelector.vue"),
   },
   {
