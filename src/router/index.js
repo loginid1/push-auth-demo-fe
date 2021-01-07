@@ -16,8 +16,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "auth" */ "../views/Authenticate.vue"),
+    component: () => import("../views/Login.vue"),
     props: {
       mode: "Login",
     },
@@ -25,8 +24,7 @@ const routes = [
   {
     path: "/register",
     name: "Register",
-    component: () =>
-      import(/* webpackChunkName: "auth" */ "../views/Authenticate.vue"),
+    component: () => import("../views/Register.vue"),
     props: {
       mode: "Register",
     },
@@ -38,9 +36,9 @@ const routes = [
     component: () => import("../views/AuthSelector.vue"),
   },
   {
-    path: "/timer",
-    name: "Timer",
-    component: () => import("../views/Timer.vue"),
+    path: "/push/auth",
+    name: "PushAutentication",
+    component: () => import("../views/PushAuthentication.vue"),
     props: (route) => ({ mode: route.query.mode }),
   },
 ];

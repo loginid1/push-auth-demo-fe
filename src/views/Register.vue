@@ -22,9 +22,12 @@
           </div>
         </div>
         <div class="field">
-          <button class="button is-link is-fullwidth" @click="onMainClicked">
-            {{ mode }}
+          <button class="button is-link is-fullwidth" @click="onRegister">
+            Register
           </button>
+        </div>
+        <div class="field has-text-centered">
+          <a href="/login">Login</a>
         </div>
       </div>
     </div>
@@ -34,12 +37,6 @@
 import { mapState } from "vuex";
 
 export default {
-  props: {
-    mode: {
-      type: String,
-      default: "Login",
-    },
-  },
   computed: {
     ...mapState(["directweb"]),
   },
@@ -50,19 +47,11 @@ export default {
     };
   },
   methods: {
-    async login(username) {
-      await this.$store.dispatch('login', username)
-      await this.$router.push('/');
-    },
-    async onMainClicked() {
+    async onRegister() {
       try {
-        if (this.mode === 'Login') {
-          const result = await this.directweb.login(this.username, { userDetection: true });
-          await this.login(result.username);
-        } else {
-          const result = await this.directweb.register(this.username);
-          await this.login(result.username);
-        }
+        const result = await this.directweb.register(this.username);
+        await this.$store.dispatch('login', result.username)
+        await this.$router.push('/');
       } catch (e) {
         if (e.code === 'user_detection') {
           await this.$router.push({name: "AuthSelector", params: {username: this.username}});
