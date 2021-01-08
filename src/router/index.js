@@ -13,21 +13,14 @@ const routes = [
   {
     path: "/login",
     name: "Login",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    props: true,
     component: () => import("../views/Login.vue"),
-    props: {
-      mode: "Login",
-    },
   },
   {
     path: "/register",
     name: "Register",
+    props: true,
     component: () => import("../views/Register.vue"),
-    props: {
-      mode: "Register",
-    },
   },
   {
     path: "/auth-selector",
@@ -36,10 +29,20 @@ const routes = [
     component: () => import("../views/AuthSelector.vue"),
   },
   {
-    path: "/push/auth",
+    path: process.env.VUE_APP_PUSH_AUTH_ENDPOINT,
     name: "PushAutentication",
-    component: () => import("../views/PushAuthentication.vue"),
-    props: (route) => ({ mode: route.query.mode }),
+    component: () => import("../views/RemoteSession.vue"),
+    props: {
+      mode: "Authentication",
+    },
+  },
+  {
+    path: process.env.VUE_APP_ADD_AUTH_ENDPOINT,
+    name: "PushAutentication",
+    component: () => import("../views/RemoteSession.vue"),
+    props: {
+      mode: "Registration",
+    },
   },
 ];
 

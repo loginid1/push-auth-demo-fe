@@ -31,11 +31,11 @@
           @click="onLogin"
           :disabled="!allowAuthentication"
         >
-          Authorize Authentication
+          Authorize {{mode}}
         </button>
 
         <h4 v-if="isAuthenticated" class="title is-5 has-text-dark has-text-centered mt-6">
-          Authentication Authorized!
+          {{mode}} Authorized!
         </h4>
       </div>
     </div>
@@ -46,6 +46,9 @@ import { mapState } from "vuex";
 import Browser from '../loginid.browser.min';
 
 export default {
+  props: {
+    mode: String
+  },
   async mounted() {
     this.allowAuthentication = this.$route.query.session !== undefined && await Browser.isFido2Supported();
   },
