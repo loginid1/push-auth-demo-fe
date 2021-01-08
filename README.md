@@ -18,7 +18,7 @@ Copy and rename `.env.example` to `.env`.
 
 `PORT`, `VUE_APP_PUSH_AUTH_ENDPOINT` and `VUE_APP_ADD_AUTH_ENDPOINT` could be whatever route you want, but you need to input whatever you set in this environment file into the [loginID dashboard](https://sandbox-usw1.api.loginid.io/) during the process to obtian your BASE URL and API KEY.
 
-* For further instructions on how to obtain BASE URL and API key on the DirectWeb integration, please refer to [here] (https://docs.loginid.io/websdks/dw#step-1---obtain-your-client-keys)
+* For further instructions on how to obtain BASE URL and API key on the DirectWeb integration, please refer to [here](https://docs.loginid.io/websdks/dw#step-1---obtain-your-client-keys)
 
 
 . PLEASE NOTE YOU WILL NEED TO ACCESS THE DASHBOARD USING [loginID dashboard](https://sandbox-usw1.api.loginid.io/) 
