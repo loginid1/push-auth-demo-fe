@@ -51,7 +51,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 #### Step 0. If you are doing two computer setups make sure you run two copies of this demo project with the exact same env variables.
 
-It would be pReferable if you test this on one computer, using two different fido2 enabled browsers:
+It would be preferable if you test this on one computer, using two different fido2 enabled browsers:
 
 * On MacOS: latest chrome, latest canary chrome and latest brave browser.
 
