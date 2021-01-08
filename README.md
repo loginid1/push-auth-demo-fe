@@ -18,6 +18,8 @@ Copy and rename `.env.example` to `.env`.
 
 `PORT`, `VUE_APP_PUSH_AUTH_ENDPOINT` and `VUE_APP_ADD_AUTH_ENDPOINT` could be whatever route you want, but you need to input whatever you set in this environment file into the [loginID dashboard](https://sandbox-usw1.api.loginid.io/) during the process to obtian your BASE URL and API KEY.
 
+For further instruction on how to obtain BASE URL and API key on the DirectWeb integration, please refer to https://docs.loginid.io/websdks/dw#step-1---obtain-your-client-keys. PLEASE NOTE YOU WILL NEED TO ACCESS THE DASHBOARD USING [loginID dashboard](https://sandbox-usw1.api.loginid.io/) 
+
 example
 
 ```
@@ -48,11 +50,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 #### Step 0. If you are doing two computer setups make sure you run two copies of this demo project with the exact same env variables.
 
-It would be peferable if you test this on one machine, using two different fido2 enabled browsers.
+It would be pReferable if you test this on one computer, using two different fido2 enabled browsers:
 
-On MacOS it would be latest chrome, latest canary chrome and latest brave browser.
+* On MacOS: latest chrome, latest canary chrome and latest brave browser.
 
-On Windows, as long as the machine has Windows Hello enabled, all browsers should work.
+* On Windows: as long as the computer has Windows Hello enabled, all browsers should work.
 
 #### Step 1. On your first computer (or first browser) go to [http://localhost:3000/login](http://localhost:3000/login)
 
@@ -66,29 +68,29 @@ Register a user of your choosing, Lets just use john.doe for this example.
 
 ![img3](./img/3.png)
 
-You will be prompted to authenticate with an authenticator
+* You will be prompted to authenticate with an authenticator
 
-You should see Hello john.doe on the next screen.
+* You should see Hello john.doe on the next screen.
 
 #### Step 2. On your second computer (or second browser) go to [http://localhost:3000/login](http://localhost:3000/login)
 
-Input the same username you put on your first computer (or first browser) in my case john.doe.
+* Input the same username used your first computer (or first browser) in my case john.doe.
 
-Also input a transient email. _This field only exists for demo purposes_ in a real life environment the email would be sent to the email the user have on profile.
+* Input a transient email. _This field only exists for demo purposes_ in a real life environment the email would be sent to the email the user has on profile.
 
-Make sure you input an email you have access to on your first computer (or first browser).
+* Make sure you input an email you have access to on your first computer (or first browser).
 
 To authenticate, press the `Push Authentication` button. You should see the following screen.
 
 ![img4](./img/4.png)
 
-Now go back to your first computer or first browser and check your email, whatever you put in transient email.
+* Now go back to your first computer or first browser and check your inbox belongin to the transient email.
 
 ![img5](./img/5.png)
 
-Check spam folder if you didn't receive it within a few seconds.
+* Check spam folder if you didn't receive it within a few seconds.
 
-Clicking the link should send you to authenticate. Input your username as prompted
+* Clicking the link should send you to authenticate. Input your username as prompted
 
 ![img6](./img/6.png)
 
@@ -100,4 +102,4 @@ On your second computer and browser you should see the hello screen.
 
 #### Step 3.Repeat step 2 but for add authenticator
 
-The flow is the same, except at the end of the process you should be able to login on the second computer or second browser by clicking on the login button, and the second browser would no longer neeed to use push authentication to authenticate.
+The flow is the same, except at the end of the process you should be able to login on the second computer or the second browser by clicking on the login button, and the second browser would no longer neeed to use push authentication to authenticate.
